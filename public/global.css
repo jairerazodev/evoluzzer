@@ -1,0 +1,128 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  padding-top: 9rem; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+:root {
+  --title-font-size: 3rem; /* Duplicado de 3.25rem */
+  --title-margin-bottom: 1rem; /* Duplicado de 1.75rem */
+  --text-font-size: 2rem; /* Duplicado de 1.2rem */
+}
+
+/* Set up the basic page layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Helvetica', sans-serif; /* Add your preferred font */
+  background-color: #002952; /* Background color */
+  color: #fae259; /* Text color */
+}
+
+/* Hide default scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Flexbox setup to center content */
+body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smooth scrolling behavior */
+.scroll-container {
+  scroll-behavior: smooth;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Expanded state for the card */
+.card.expanded {
+  width: 50vw; /* Expands to 50% of viewport width */
+}
+
+/* Dark overlay for better text readability */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Ensure the scroll container covers the full screen */
+.scroll-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #3b2a20; /* Adjust to match the background */
+}
+
+/* Flex setup for horizontal scrolling */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Expandable container (Fibonacci Rectangle) */
+.expandable-container {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.expandable-container.expanded {
+  width: 50vw; /* Adjust as needed */
+}
+
+/* Art Deco pattern styles */
+.art-deco-pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
